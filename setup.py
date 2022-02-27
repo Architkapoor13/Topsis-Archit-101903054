@@ -1,30 +1,35 @@
-from distutils.core import setup
+import pathlib
+from setuptools import setup
+
+# The directory containing this file
+HERE = pathlib.Path(__file__).parent
+
+# The text of the README file
+README = (HERE / "README.md").read_text()
+
+# This call to setup() does all the work
 setup(
-  name = 'Topsis-Archit-101903054',         # How you named your package folder (MyLib)
-  packages = ['Topsis-Archit-101903054'],   # Chose the same as "name"
-  version = '1.0',      # Start with a small number and increase it with every change you make
-  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-  description = 'It calculates TOPSIS for the provided dataset',   # Give a short description about your library
-  author = 'Archit Kapoor',                   # Type in your name
-  author_email = 'architkapoor13@gmail.com',      # Type in your E-Mail
-  url = 'https://github.com/Architkapoor13/Topsis-Archit-101903054',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',    # I explain this later on
-  keywords = ['PYTHON', 'TOPSIS', 'DATASCIENCE'],   # Keywords that define your package best
-  install_requires=[            # I get to this in a second
-         'pandas',
-      ],
-  classifiers=[
-    'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
-    'Intended Audience :: Developers',      # Define that your audience are developers
-    'Topic :: Software Development :: Build Tools',
-    'License :: OSI Approved :: MIT License',   # Again, pick a license
-    'Programming Language :: Python :: 3',      #Specify which pyhton versions that you want to support
-    'Programming Language :: Python :: 3.4',
-    'Programming Language :: Python :: 3.5',
-    'Programming Language :: Python :: 3.6',
-    'Programming Language :: Python :: 3.7',
-    'Programming Language :: Python :: 3.8',
-    'Programming Language :: Python :: 3.9',
-    'Programming Language :: Python :: 3.10',
-  ],
+    name="Topsis-Archit-101903054",
+    version="1.1.0",
+    description="Calculates TOPSIS on the given dataset!",
+    long_description=README,
+    long_description_content_type="text/markdown",
+    url="https://github.com/Snehil-21/Topsis-Snehil-101903064",
+    author="Archit Kapoor",
+    author_email="architkapoor13@gmail.com",
+    license="MIT",
+    classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+    ],
+    packages=["Topsis"],
+    include_package_data=True,
+    install_requires=['pandas'],
+    entry_points={
+        "console_scripts": [
+            "Topsis=Topsis.__main__:main",
+        ]
+    },
 )

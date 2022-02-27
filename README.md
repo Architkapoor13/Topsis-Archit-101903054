@@ -1,11 +1,12 @@
 # Topsis-Archit-101903054
-It takes an integer as an input and prints it square.
+It takes the dataset and calculates the TOPSIS and assign the topsis score and rank!
 
 ## Installation
-```pip install saral-square```
+```pip install Topsis-Archit-101903054```
 
 ## How to use it?
-Open terminal and type square and then input the integer
+Open terminal Write:
+```Topsis <inputFilename.csv> <"Weights"> <"Impacts"> <outputFilename.csv>```
 
 ## License
 

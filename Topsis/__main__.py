@@ -4,7 +4,7 @@ import pandas as pd
 from operator import add, truediv
 
 try:
-    def topsis(inputFile, weights, impacts, outputFileName):
+    def main(inputFile, weights, impacts, outputFileName):
         df = pd.read_csv(inputFile)
         if len(df.columns) < 3:
             raise Exception("Minimum number of columns in the input file must be 3!")
@@ -54,7 +54,7 @@ try:
     if __name__ == '__main__':
         if len(sys.argv) < 5:
             raise Exception("Invalid number Arguments!, Usage: python <program.py> <InputDataFile> <Weights> <Impacts> <ResultFileName>")
-        topsis(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+        main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
 except Exception as e:
     print(e)
 
